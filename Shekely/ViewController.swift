@@ -15,11 +15,13 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
 //        Shell().execute("ls -al")
-        let pmset: Guarantee<[PMSetParsingModel]> = Shell().execute("pmset -g log|grep -e \" Sleep  \" -e \" Wake  \"")
+//        let pmset: Guarantee<[PMSetParsingModel]> = Shell().execute("pmset -g log|grep -e \" Sleep  \" -e \" Wake  \"")
+        let last: Guarantee<[LastParsingModel]> = Shell().execute("last reboot shutdown")
         
-        pmset.done { (out) in
+        last.done { (out) in
             out.forEach { (model) in
-                print("\(model.timestamp) - \(model.powerState) -\t\(model.reason)")
+                print(model.pseudoUser, model.timestamp )
+//                print("\(model.timestamp) - \(model.powerState) -\t\(model.reason)")
             }
         }
 

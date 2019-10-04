@@ -1,5 +1,5 @@
 //
-//  PowerManagementService.swift
+//  PowerHistoryService.swift
 //  Shekely
 //
 //  Created by Hubert Andrzejewski on 03/10/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class PowerManagementService {
+final class PowerHistoryService {
     
 
     

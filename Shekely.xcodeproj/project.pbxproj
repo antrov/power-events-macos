@@ -11,6 +11,7 @@
 		AFACE7D323462E8600F4568B /* PowerManagementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7D123462E8600F4568B /* PowerManagementService.swift */; };
 		AFACE7D7234635F700F4568B /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7D6234635F700F4568B /* Shell.swift */; };
 		AFE84DAD2347BF9C006A4705 /* PMSetParsingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */; };
+		AFE84DAF2347C449006A4705 /* LastParsingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84DAE2347C449006A4705 /* LastParsingModel.swift */; };
 		AFF55FC7234621BD001C4D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF55FC6234621BD001C4D72 /* AppDelegate.swift */; };
 		AFF55FC9234621BD001C4D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF55FC8234621BD001C4D72 /* ViewController.swift */; };
 		AFF55FCB234621BD001C4D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF55FCA234621BD001C4D72 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		AFACE7D123462E8600F4568B /* PowerManagementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerManagementService.swift; sourceTree = "<group>"; };
 		AFACE7D6234635F700F4568B /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMSetParsingModel.swift; sourceTree = "<group>"; };
+		AFE84DAE2347C449006A4705 /* LastParsingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastParsingModel.swift; sourceTree = "<group>"; };
 		AFF55FC3234621BD001C4D72 /* Shekely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shekely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF55FC6234621BD001C4D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF55FC8234621BD001C4D72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,18 +50,19 @@
 			isa = PBXGroup;
 			children = (
 				AFACE7CF23462E8600F4568B /* ServiceLocator.swift */,
-				AFACE7D023462E8600F4568B /* Power Management */,
+				AFACE7D023462E8600F4568B /* Power History */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		AFACE7D023462E8600F4568B /* Power Management */ = {
+		AFACE7D023462E8600F4568B /* Power History */ = {
 			isa = PBXGroup;
 			children = (
 				AFACE7D123462E8600F4568B /* PowerManagementService.swift */,
 				AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */,
+				AFE84DAE2347C449006A4705 /* LastParsingModel.swift */,
 			);
-			path = "Power Management";
+			path = "Power History";
 			sourceTree = "<group>";
 		};
 		AFACE7D4234635B300F4568B /* Utils */ = {
@@ -97,10 +100,10 @@
 		AFF55FC5234621BD001C4D72 /* Shekely */ = {
 			isa = PBXGroup;
 			children = (
-				AFACE7D4234635B300F4568B /* Utils */,
 				AFF55FC6234621BD001C4D72 /* AppDelegate.swift */,
 				AFF55FC8234621BD001C4D72 /* ViewController.swift */,
 				AFACE7CE23462E8600F4568B /* Services */,
+				AFACE7D4234635B300F4568B /* Utils */,
 				AFF55FCA234621BD001C4D72 /* Assets.xcassets */,
 				AFF55FCC234621BD001C4D72 /* Main.storyboard */,
 				AFF55FCF234621BD001C4D72 /* Info.plist */,
@@ -188,6 +191,7 @@
 				AFE84DAD2347BF9C006A4705 /* PMSetParsingModel.swift in Sources */,
 				AFACE7D223462E8600F4568B /* ServiceLocator.swift in Sources */,
 				AFF55FC9234621BD001C4D72 /* ViewController.swift in Sources */,
+				AFE84DAF2347C449006A4705 /* LastParsingModel.swift in Sources */,
 				AFACE7D7234635F700F4568B /* Shell.swift in Sources */,
 				AFACE7D323462E8600F4568B /* PowerManagementService.swift in Sources */,
 				AFF55FC7234621BD001C4D72 /* AppDelegate.swift in Sources */,
