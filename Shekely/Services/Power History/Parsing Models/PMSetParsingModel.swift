@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PMSetParsingModel: ShellParsingModel {
+class PMSetParsingModel: ShellParsingModel, PowerEventDescribing {
     
     private static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -34,11 +34,36 @@ class PMSetParsingModel: ShellParsingModel {
         case other = "com.antrov.undefinedreason"
     }
     
-    let timestamp: Date
     let powerState: PowerState
     let reason: Reason
     
-    required init?(_ line: Substring) {
+    // MARK: - <EventDescribing>
+    
+    let timestamp: Date
+    
+    var isUserCaused: Bool {
+        switch reason {
+        case .clamshellSleep,
+             .lidOpen,
+             .powerButton:
+            return true
+            
+        default:
+            return false
+        }
+    }
+    
+    var isPowerOn: Bool {
+        switch powerState {
+        case .sleep:
+            return false
+        
+        case .wake:
+            return true
+        }
+    }
+    
+    required init?(_ line: String) {
         let columns = line.split(separator: "\t")
         
         guard columns.count > 1 else { return nil }
@@ -55,5 +80,5 @@ class PMSetParsingModel: ShellParsingModel {
         self.timestamp = date
         self.reason = Reason.allCases.first { description.contains($0.rawValue) } ?? .other
     }
-    
+
 }

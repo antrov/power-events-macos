@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFA0E82E235A172800D98880 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0E82D235A172800D98880 /* ContentView.swift */; };
 		AFACE7D223462E8600F4568B /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7CF23462E8600F4568B /* ServiceLocator.swift */; };
-		AFACE7D323462E8600F4568B /* PowerManagementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7D123462E8600F4568B /* PowerManagementService.swift */; };
+		AFACE7D323462E8600F4568B /* PowerHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7D123462E8600F4568B /* PowerHistoryService.swift */; };
 		AFACE7D7234635F700F4568B /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7D6234635F700F4568B /* Shell.swift */; };
+		AFB0FDAC2354AF0000633E14 /* TimeScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0FDAB2354AF0000633E14 /* TimeScheduleService.swift */; };
 		AFE84DAD2347BF9C006A4705 /* PMSetParsingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */; };
 		AFE84DAF2347C449006A4705 /* LastParsingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84DAE2347C449006A4705 /* LastParsingModel.swift */; };
 		AFF55FC7234621BD001C4D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF55FC6234621BD001C4D72 /* AppDelegate.swift */; };
-		AFF55FC9234621BD001C4D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF55FC8234621BD001C4D72 /* ViewController.swift */; };
 		AFF55FCB234621BD001C4D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF55FCA234621BD001C4D72 /* Assets.xcassets */; };
 		AFF55FCE234621BD001C4D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF55FCC234621BD001C4D72 /* Main.storyboard */; };
 		AFF55FD823462340001C4D72 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = AFF55FD723462340001C4D72 /* PromiseKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AFA0E82D235A172800D98880 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AFACE7CF23462E8600F4568B /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
-		AFACE7D123462E8600F4568B /* PowerManagementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerManagementService.swift; sourceTree = "<group>"; };
+		AFACE7D123462E8600F4568B /* PowerHistoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerHistoryService.swift; sourceTree = "<group>"; };
 		AFACE7D6234635F700F4568B /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		AFB0FDAB2354AF0000633E14 /* TimeScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeScheduleService.swift; sourceTree = "<group>"; };
 		AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMSetParsingModel.swift; sourceTree = "<group>"; };
 		AFE84DAE2347C449006A4705 /* LastParsingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastParsingModel.swift; sourceTree = "<group>"; };
 		AFF55FC3234621BD001C4D72 /* Shekely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shekely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF55FC6234621BD001C4D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFF55FC8234621BD001C4D72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFF55FCA234621BD001C4D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFF55FCD234621BD001C4D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFF55FCF234621BD001C4D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,11 +48,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF4CE5DF2351DA3500D84859 /* Parsing Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */,
+				AFE84DAE2347C449006A4705 /* LastParsingModel.swift */,
+			);
+			path = "Parsing Models";
+			sourceTree = "<group>";
+		};
 		AFACE7CE23462E8600F4568B /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				AFACE7CF23462E8600F4568B /* ServiceLocator.swift */,
 				AFACE7D023462E8600F4568B /* Power History */,
+				AFB0FDAA2354AEE800633E14 /* Time Schedule */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -58,9 +70,8 @@
 		AFACE7D023462E8600F4568B /* Power History */ = {
 			isa = PBXGroup;
 			children = (
-				AFACE7D123462E8600F4568B /* PowerManagementService.swift */,
-				AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */,
-				AFE84DAE2347C449006A4705 /* LastParsingModel.swift */,
+				AFACE7D123462E8600F4568B /* PowerHistoryService.swift */,
+				AF4CE5DF2351DA3500D84859 /* Parsing Models */,
 			);
 			path = "Power History";
 			sourceTree = "<group>";
@@ -79,6 +90,14 @@
 				AFACE7D6234635F700F4568B /* Shell.swift */,
 			);
 			path = Shell;
+			sourceTree = "<group>";
+		};
+		AFB0FDAA2354AEE800633E14 /* Time Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				AFB0FDAB2354AF0000633E14 /* TimeScheduleService.swift */,
+			);
+			path = "Time Schedule";
 			sourceTree = "<group>";
 		};
 		AFF55FBA234621BD001C4D72 = {
@@ -101,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF55FC6234621BD001C4D72 /* AppDelegate.swift */,
-				AFF55FC8234621BD001C4D72 /* ViewController.swift */,
+				AFA0E82D235A172800D98880 /* ContentView.swift */,
 				AFACE7CE23462E8600F4568B /* Services */,
 				AFACE7D4234635B300F4568B /* Utils */,
 				AFF55FCA234621BD001C4D72 /* Assets.xcassets */,
@@ -189,11 +208,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFE84DAD2347BF9C006A4705 /* PMSetParsingModel.swift in Sources */,
+				AFB0FDAC2354AF0000633E14 /* TimeScheduleService.swift in Sources */,
 				AFACE7D223462E8600F4568B /* ServiceLocator.swift in Sources */,
-				AFF55FC9234621BD001C4D72 /* ViewController.swift in Sources */,
 				AFE84DAF2347C449006A4705 /* LastParsingModel.swift in Sources */,
+				AFA0E82E235A172800D98880 /* ContentView.swift in Sources */,
 				AFACE7D7234635F700F4568B /* Shell.swift in Sources */,
-				AFACE7D323462E8600F4568B /* PowerManagementService.swift in Sources */,
+				AFACE7D323462E8600F4568B /* PowerHistoryService.swift in Sources */,
 				AFF55FC7234621BD001C4D72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +359,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.Shekely;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -359,6 +380,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.Shekely;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

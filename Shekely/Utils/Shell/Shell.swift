@@ -10,13 +10,24 @@ import Foundation
 import PromiseKit
 
 protocol ShellParsingModel {
-    init?(_ line: Substring)
+    init?(_ line: String)
 }
 
 final class Shell {
     
+    enum EOLSymbol: String {
+        case lf = "\n"
+        case crlf = "\r\n"
+        case cr = "\r"
+    }
+    
     private let notificationQueue = OperationQueue()
     private var notificationObserver: NSObjectProtocol!
+    private let eol: EOLSymbol
+    
+    init(eol: EOLSymbol = .lf) {
+        self.eol = eol
+    }    
     
     func execute<T: ShellParsingModel>(_ command: String) -> Guarantee<[T]> {
         let task = Process()
@@ -58,10 +69,10 @@ final class Shell {
             
             guard let output = String(data: data, encoding: .utf8) else { return }
             
-            var lines = unparsedLine.appending(output).split(separator: "\n")
+            var lines = unparsedLine.appending(output).components(separatedBy: self.eol.rawValue)
             
-            if output.last != "\n", let lastLine = lines.popLast() {
-                unparsedLine = String(lastLine)
+            if !output.hasSuffix(self.eol.rawValue), let lastLine = lines.popLast() {
+                unparsedLine = lastLine
             } else {
                 unparsedLine = ""
             }

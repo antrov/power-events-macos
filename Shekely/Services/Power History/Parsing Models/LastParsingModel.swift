@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class LastParsingModel: ShellParsingModel {
+final class LastParsingModel: ShellParsingModel, PowerEventDescribing {
     
     private static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -24,9 +24,26 @@ final class LastParsingModel: ShellParsingModel {
     }
     
     let pseudoUser: PseudoUser
+    
+    // MARK: - <PowerEventDescribing>
+    
     let timestamp: Date
     
-    init?(_ line: Substring) {
+    var isUserCaused: Bool {
+        return true
+    }
+    
+    var isPowerOn: Bool {
+        switch pseudoUser {
+        case .reboot:
+            return true
+            
+        case .shutdown:
+            return false
+        }
+    }
+    
+    init?(_ line: String) {
         let columns = line.split(separator: " ")
         
         guard columns.count == 6 else { return nil }
@@ -41,5 +58,4 @@ final class LastParsingModel: ShellParsingModel {
         self.pseudoUser = user
         self.timestamp = date
     }
-    
 }
