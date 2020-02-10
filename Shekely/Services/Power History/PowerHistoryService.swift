@@ -82,10 +82,15 @@ final class PowerHistoryService {
     private func updateHistory(with events: [PowerEventDescribing]) {
         self.events = events
         let f = self.events.first { (event) -> Bool in
-            return Calendar.current.isDateInToday(event.timestamp)
+            return Calendar.current.isDateInToday(event.timestamp) && event.isUserCaused
         }
         
-        print(f?.timestamp.timeIntervalSinceNow)
+        let formatter = DateFormatter()
+        formatter.timeStyle = .full
+        formatter.dateStyle = .full
+        formatter.timeZone = TimeZone.current
+        
+        print(formatter.string(from: f!.timestamp))
         
         delegate?.powerHistoryUpdated(with: self.events)
     }
