@@ -1,6 +1,6 @@
 //
 //  PowerHistoryService.swift
-//  Shekely
+//  PowerEvents
 //
 //  Created by Hubert Andrzejewski on 03/10/2019.
 //  Copyright © 2019 Hubert Andrzejewski. All rights reserved.
@@ -9,6 +9,7 @@
 import Foundation
 import PromiseKit
 import AppKit
+import Combine
 
 protocol PowerEventDescribing {
     var isUserCaused: Bool { get }
@@ -20,22 +21,10 @@ protocol PowserHistoryServiceDelegate: class {
     func powerHistoryUpdated(with events: [PowerEventDescribing])
 }
 
-//class let willPowerOffNotification: NSNotification.Name
-//
-//Posted when the user has requested a logout or that the machine be powered off.
-//class let willSleepNotification: NSNotification.Name
-//
-//Posted before the machine goes to sleep.
-//class let screensDidSleepNotification: NSNotification.Name
-//
-//Posted when the machine’s screen goes to sleep.
-//class let screensDidWakeNotification: NSNotification.Name
-//
-//Posted when the machine’s screens wake.
-
-final class PowerHistoryService {
+final class PowerHistoryService: ObservableObject {
     
-    var events: [PowerEventDescribing] = []
+    @Published var events: [PowerEventDescribing] = []
+    
     weak var delegate: PowserHistoryServiceDelegate?
     
     private var notificationsObservers: [Any]?
@@ -81,22 +70,8 @@ final class PowerHistoryService {
     
     private func updateHistory(with events: [PowerEventDescribing]) {
         self.events = events
-        let f = self.events.first { (event) -> Bool in
-            return Calendar.current.isDateInToday(event.timestamp) && event.isUserCaused
-        }
-        
-        let formatter = DateFormatter()
-        formatter.timeStyle = .full
-        formatter.dateStyle = .full
-        formatter.timeZone = TimeZone.current
-        
-        print(formatter.string(from: f!.timestamp))
         
         delegate?.powerHistoryUpdated(with: self.events)
     }
-    
-    // MARK: Notifications
-    
-//    private func
     
 }

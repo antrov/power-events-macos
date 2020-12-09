@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AFA0E82E235A172800D98880 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0E82D235A172800D98880 /* ContentView.swift */; };
-		AFACE7D223462E8600F4568B /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7CF23462E8600F4568B /* ServiceLocator.swift */; };
 		AFACE7D323462E8600F4568B /* PowerHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7D123462E8600F4568B /* PowerHistoryService.swift */; };
 		AFACE7D7234635F700F4568B /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACE7D6234635F700F4568B /* Shell.swift */; };
-		AFB0FDAC2354AF0000633E14 /* TimeScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0FDAB2354AF0000633E14 /* TimeScheduleService.swift */; };
+		AFC2014B2580149100BDC6A2 /* PowerEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2014A2580149100BDC6A2 /* PowerEventView.swift */; };
 		AFE84DAD2347BF9C006A4705 /* PMSetParsingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */; };
 		AFE84DAF2347C449006A4705 /* LastParsingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84DAE2347C449006A4705 /* LastParsingModel.swift */; };
 		AFF55FC7234621BD001C4D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF55FC6234621BD001C4D72 /* AppDelegate.swift */; };
@@ -22,18 +21,17 @@
 
 /* Begin PBXFileReference section */
 		AFA0E82D235A172800D98880 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AFACE7CF23462E8600F4568B /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		AFACE7D123462E8600F4568B /* PowerHistoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerHistoryService.swift; sourceTree = "<group>"; };
 		AFACE7D6234635F700F4568B /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
-		AFB0FDAB2354AF0000633E14 /* TimeScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeScheduleService.swift; sourceTree = "<group>"; };
+		AFC2014A2580149100BDC6A2 /* PowerEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerEventView.swift; sourceTree = "<group>"; };
 		AFE84DAC2347BF9C006A4705 /* PMSetParsingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMSetParsingModel.swift; sourceTree = "<group>"; };
 		AFE84DAE2347C449006A4705 /* LastParsingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastParsingModel.swift; sourceTree = "<group>"; };
-		AFF55FC3234621BD001C4D72 /* Shekely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shekely.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF55FC3234621BD001C4D72 /* PowerEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF55FC6234621BD001C4D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF55FCA234621BD001C4D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFF55FCD234621BD001C4D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFF55FCF234621BD001C4D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFF55FD0234621BD001C4D72 /* Shekely.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shekely.entitlements; sourceTree = "<group>"; };
+		AFF55FD0234621BD001C4D72 /* PowerEvents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PowerEvents.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,31 +55,13 @@
 			path = "Parsing Models";
 			sourceTree = "<group>";
 		};
-		AFACE7CE23462E8600F4568B /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				AFACE7CF23462E8600F4568B /* ServiceLocator.swift */,
-				AFACE7D023462E8600F4568B /* Power History */,
-				AFB0FDAA2354AEE800633E14 /* Time Schedule */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		AFACE7D023462E8600F4568B /* Power History */ = {
+		AFACE7D023462E8600F4568B /* Power History Service */ = {
 			isa = PBXGroup;
 			children = (
 				AFACE7D123462E8600F4568B /* PowerHistoryService.swift */,
 				AF4CE5DF2351DA3500D84859 /* Parsing Models */,
 			);
-			path = "Power History";
-			sourceTree = "<group>";
-		};
-		AFACE7D4234635B300F4568B /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				AFACE7D5234635D600F4568B /* Shell */,
-			);
-			path = Utils;
+			path = "Power History Service";
 			sourceTree = "<group>";
 		};
 		AFACE7D5234635D600F4568B /* Shell */ = {
@@ -92,18 +72,10 @@
 			path = Shell;
 			sourceTree = "<group>";
 		};
-		AFB0FDAA2354AEE800633E14 /* Time Schedule */ = {
-			isa = PBXGroup;
-			children = (
-				AFB0FDAB2354AF0000633E14 /* TimeScheduleService.swift */,
-			);
-			path = "Time Schedule";
-			sourceTree = "<group>";
-		};
 		AFF55FBA234621BD001C4D72 = {
 			isa = PBXGroup;
 			children = (
-				AFF55FC5234621BD001C4D72 /* Shekely */,
+				AFF55FC5234621BD001C4D72 /* PowerEvents */,
 				AFF55FC4234621BD001C4D72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,32 +83,33 @@
 		AFF55FC4234621BD001C4D72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFF55FC3234621BD001C4D72 /* Shekely.app */,
+				AFF55FC3234621BD001C4D72 /* PowerEvents.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFF55FC5234621BD001C4D72 /* Shekely */ = {
+		AFF55FC5234621BD001C4D72 /* PowerEvents */ = {
 			isa = PBXGroup;
 			children = (
 				AFF55FC6234621BD001C4D72 /* AppDelegate.swift */,
 				AFA0E82D235A172800D98880 /* ContentView.swift */,
-				AFACE7CE23462E8600F4568B /* Services */,
-				AFACE7D4234635B300F4568B /* Utils */,
+				AFC2014A2580149100BDC6A2 /* PowerEventView.swift */,
+				AFACE7D023462E8600F4568B /* Power History Service */,
+				AFACE7D5234635D600F4568B /* Shell */,
 				AFF55FCA234621BD001C4D72 /* Assets.xcassets */,
 				AFF55FCC234621BD001C4D72 /* Main.storyboard */,
 				AFF55FCF234621BD001C4D72 /* Info.plist */,
-				AFF55FD0234621BD001C4D72 /* Shekely.entitlements */,
+				AFF55FD0234621BD001C4D72 /* PowerEvents.entitlements */,
 			);
-			path = Shekely;
+			path = PowerEvents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AFF55FC2234621BD001C4D72 /* Shekely */ = {
+		AFF55FC2234621BD001C4D72 /* PowerEvents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFF55FD3234621BD001C4D72 /* Build configuration list for PBXNativeTarget "Shekely" */;
+			buildConfigurationList = AFF55FD3234621BD001C4D72 /* Build configuration list for PBXNativeTarget "PowerEvents" */;
 			buildPhases = (
 				AFF55FBF234621BD001C4D72 /* Sources */,
 				AFF55FC0234621BD001C4D72 /* Frameworks */,
@@ -146,12 +119,12 @@
 			);
 			dependencies = (
 			);
-			name = Shekely;
+			name = PowerEvents;
 			packageProductDependencies = (
 				AFF55FD723462340001C4D72 /* PromiseKit */,
 			);
 			productName = Shekely;
-			productReference = AFF55FC3234621BD001C4D72 /* Shekely.app */;
+			productReference = AFF55FC3234621BD001C4D72 /* PowerEvents.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -169,7 +142,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AFF55FBE234621BD001C4D72 /* Build configuration list for PBXProject "Shekely" */;
+			buildConfigurationList = AFF55FBE234621BD001C4D72 /* Build configuration list for PBXProject "PowerEvents" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -185,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFF55FC2234621BD001C4D72 /* Shekely */,
+				AFF55FC2234621BD001C4D72 /* PowerEvents */,
 			);
 		};
 /* End PBXProject section */
@@ -208,10 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFE84DAD2347BF9C006A4705 /* PMSetParsingModel.swift in Sources */,
-				AFB0FDAC2354AF0000633E14 /* TimeScheduleService.swift in Sources */,
-				AFACE7D223462E8600F4568B /* ServiceLocator.swift in Sources */,
 				AFE84DAF2347C449006A4705 /* LastParsingModel.swift in Sources */,
 				AFA0E82E235A172800D98880 /* ContentView.swift in Sources */,
+				AFC2014B2580149100BDC6A2 /* PowerEventView.swift in Sources */,
 				AFACE7D7234635F700F4568B /* Shell.swift in Sources */,
 				AFACE7D323462E8600F4568B /* PowerHistoryService.swift in Sources */,
 				AFF55FC7234621BD001C4D72 /* AppDelegate.swift in Sources */,
@@ -349,18 +321,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Shekely/Shekely.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PowerEvents/PowerEvents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4QYMTGDJ7R;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Shekely/Info.plist;
+				INFOPLIST_FILE = PowerEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.Shekely;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.PowerEvents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -370,18 +342,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Shekely/Shekely.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PowerEvents/PowerEvents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4QYMTGDJ7R;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Shekely/Info.plist;
+				INFOPLIST_FILE = PowerEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.Shekely;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.PowerEvents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -390,7 +362,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AFF55FBE234621BD001C4D72 /* Build configuration list for PBXProject "Shekely" */ = {
+		AFF55FBE234621BD001C4D72 /* Build configuration list for PBXProject "PowerEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFF55FD1234621BD001C4D72 /* Debug */,
@@ -399,7 +371,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFF55FD3234621BD001C4D72 /* Build configuration list for PBXNativeTarget "Shekely" */ = {
+		AFF55FD3234621BD001C4D72 /* Build configuration list for PBXNativeTarget "PowerEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFF55FD4234621BD001C4D72 /* Debug */,

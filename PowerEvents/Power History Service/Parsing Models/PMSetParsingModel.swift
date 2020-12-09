@@ -1,6 +1,6 @@
 //
 //  PMSetParsingModel.swift
-//  Shekely
+//  PowerEvents
 //
 //  Created by Hubert Andrzejewski on 04/10/2019.
 //  Copyright © 2019 Hubert Andrzejewski. All rights reserved.
@@ -79,6 +79,12 @@ class PMSetParsingModel: ShellParsingModel, PowerEventDescribing {
         self.powerState = state
         self.timestamp = date
         self.reason = Reason.allCases.first { description.contains($0.rawValue) } ?? .other
+    }
+    
+    init(timestamp: Date, state: PowerState, reason: Reason) {
+        self.timestamp = timestamp
+        self.powerState = state
+        self.reason = reason
     }
 
 }
